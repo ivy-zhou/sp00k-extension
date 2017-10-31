@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sp00k Options</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+    body {
+      position: relative;
+      font-family: 'Open Sans', sans-serif;
+      height: 500px;
+      width: 300px;
+      padding: 10px 10px 0px 10px;
+      background-color: #e9e9e9;
+    }
+
+    h1 {
+      display: inline-block;
+      padding-right: 5px;
+    }
+
+    .ghost {
+      display: inline-block;
+      height: 30px;
+      transition: all .1s ease-in-out;
+    }
+
+    .ghost:hover {
+      opacity: 0;
+      transform: scale(2);
+    }
+
+    .credits {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      margin-left: -10px;
+      padding-bottom: 10px;
+      bottom: 0;
+    }
+
+    a {
+      color: #FE9920;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    input {
+      font-size: 1em;
+      width: 95%;
+      padding: 10px 5px 10px 5px;
+      color: #000;
+    }
+
+    li.tag {
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      background: #FFF;
+      display: inline-block;
+      padding: 5px 10px 5px 10px;
+      margin-right: 10px;
+      box-shadow: 3px 3px #ccc;
+    }
+
+    li.tag span {
+      color: #E90606;
+      margin: 0 0 0 10px;
+    }
+
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 20px 0px 20px 0px;
+    }
+
+    .pulse {
+      color: #E90606;
+      margin: 0 3px;
+      animation: pound .35s infinite alternate;
+      -webkit-animation: pound .35s infinite alternate;
+    }
+
+    @-webkit-keyframes pound {
+      to {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes pound {
+      to {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Unspook</h1>
+  <img src="https://image.flaticon.com/icons/svg/581/581606.svg" class="ghost" />
+  <p>Add a fear:</p>
+  <input type="text" />
+
+  <ul id="tags">
+  </ul>
+
+  <span class="credits">
+    made with <i class="fa fa-heart pulse"></i> by <a href="https://github.com/ivy-zhou" target="_blank">ivy-zhou</a>
+  </span>
+
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <script src="options.js"></script>
+</body>
+
+</html>
